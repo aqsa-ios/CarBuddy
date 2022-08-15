@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "aston-martin-dbs-1967-1972-1459064862.97.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

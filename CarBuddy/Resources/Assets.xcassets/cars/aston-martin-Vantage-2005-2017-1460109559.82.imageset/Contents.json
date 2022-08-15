@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "aston-martin-Vantage-2005-2017-1460109559.82.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

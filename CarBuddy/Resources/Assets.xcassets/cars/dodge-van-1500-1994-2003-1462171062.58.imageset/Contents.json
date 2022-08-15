@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "dodge-van-1500-1994-2003-1462171062.58.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

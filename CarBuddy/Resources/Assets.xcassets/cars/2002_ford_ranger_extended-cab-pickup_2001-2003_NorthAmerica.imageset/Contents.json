@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2002_ford_ranger_extended-cab-pickup_2001-2003_NorthAmerica.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

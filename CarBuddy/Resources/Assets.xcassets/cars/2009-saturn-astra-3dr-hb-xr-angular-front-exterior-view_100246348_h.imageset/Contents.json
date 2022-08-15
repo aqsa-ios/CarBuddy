@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2009-saturn-astra-3dr-hb-xr-angular-front-exterior-view_100246348_h.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

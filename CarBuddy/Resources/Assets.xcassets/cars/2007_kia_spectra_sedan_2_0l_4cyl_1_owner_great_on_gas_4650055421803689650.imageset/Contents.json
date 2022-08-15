@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2007_kia_spectra_sedan_2_0l_4cyl_1_owner_great_on_gas_4650055421803689650.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

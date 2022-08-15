@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "120375429_1_1000x700_wagon-r-2011-maruti-suzuki-wagon-r-11l-lxi-petro-cng-pune.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

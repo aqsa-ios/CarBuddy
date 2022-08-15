@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chevrolet-corvette-2014-2017-1474625248.99.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

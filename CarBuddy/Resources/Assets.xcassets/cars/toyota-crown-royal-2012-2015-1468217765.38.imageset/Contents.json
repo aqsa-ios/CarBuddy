@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-crown-royal-2012-2015-1468217765.38.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

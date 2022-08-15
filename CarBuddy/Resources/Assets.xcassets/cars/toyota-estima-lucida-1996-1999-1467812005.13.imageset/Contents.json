@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-estima-lucida-1996-1999-1467812005.13.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

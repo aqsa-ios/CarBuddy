@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2014-mercedes-benz-cla250-4matic-photo-591500-s-429x262.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

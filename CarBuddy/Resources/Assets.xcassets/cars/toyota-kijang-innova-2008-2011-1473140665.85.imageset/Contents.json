@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-kijang-innova-2008-2011-1473140665.85.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

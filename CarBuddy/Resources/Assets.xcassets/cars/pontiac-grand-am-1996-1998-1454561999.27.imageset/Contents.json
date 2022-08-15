@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "pontiac-grand-am-1996-1998-1454561999.27.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

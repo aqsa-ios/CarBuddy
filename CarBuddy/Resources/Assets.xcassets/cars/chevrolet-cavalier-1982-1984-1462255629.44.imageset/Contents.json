@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chevrolet-cavalier-1982-1984-1462255629.44.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ferrari-360-challenge-stradale-2003-2005-1455274596.32.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

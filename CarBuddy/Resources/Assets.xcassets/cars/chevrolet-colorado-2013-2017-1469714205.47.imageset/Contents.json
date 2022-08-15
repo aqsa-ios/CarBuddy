@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chevrolet-colorado-2013-2017-1469714205.47.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

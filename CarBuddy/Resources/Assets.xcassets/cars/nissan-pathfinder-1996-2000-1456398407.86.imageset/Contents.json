@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "nissan-pathfinder-1996-2000-1456398407.86.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

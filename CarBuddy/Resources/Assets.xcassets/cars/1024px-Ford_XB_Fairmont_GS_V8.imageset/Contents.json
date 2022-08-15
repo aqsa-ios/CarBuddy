@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "1024px-Ford_XB_Fairmont_GS_V8.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

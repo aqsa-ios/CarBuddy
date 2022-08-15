@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "autowp.ru_subaru_legacy_2.5_250t_touring_wagon_2.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "mitsubishi-minicab-van-2014-2015-1454080105.07.JPG",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "lamborghini-huracan-lp-610-4-spyder-2016-2017-1455450454.51.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2013-hyundai-elantra-coupe-2-door-auto-se-angular-front-exterior-view_100401757_h.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

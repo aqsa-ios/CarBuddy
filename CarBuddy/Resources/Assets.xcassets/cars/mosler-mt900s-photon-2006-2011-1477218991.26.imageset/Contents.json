@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "mosler-mt900s-photon-2006-2011-1477218991.26.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

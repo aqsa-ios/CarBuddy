@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chevrolet-corvette-1956-1957-1474619992.19.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

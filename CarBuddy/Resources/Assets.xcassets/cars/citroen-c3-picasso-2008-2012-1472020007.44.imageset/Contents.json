@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "citroen-c3-picasso-2008-2012-1472020007.44.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

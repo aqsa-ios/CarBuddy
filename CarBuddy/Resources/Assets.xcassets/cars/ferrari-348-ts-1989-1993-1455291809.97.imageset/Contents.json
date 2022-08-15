@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ferrari-348-ts-1989-1993-1455291809.97.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

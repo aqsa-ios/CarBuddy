@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "lamborghini-murcielago-lp640-2006-2010-1455535297.94.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

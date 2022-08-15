@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "chevrolet-aveo-2012-2017-1477280206.1.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

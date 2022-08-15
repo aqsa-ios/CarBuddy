@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "nissan-nv100-clipper-2013-2015-1460461591.01.JPG",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

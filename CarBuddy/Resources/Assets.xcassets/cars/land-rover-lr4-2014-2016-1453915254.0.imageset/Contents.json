@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "land-rover-lr4-2014-2016-1453915254.0.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

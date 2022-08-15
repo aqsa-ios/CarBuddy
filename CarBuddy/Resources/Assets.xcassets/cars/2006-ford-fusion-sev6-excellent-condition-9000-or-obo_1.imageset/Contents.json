@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "2006-ford-fusion-sev6-excellent-condition-9000-or-obo_1.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "nissan-tsuru-1992-2017-1457664184.2.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

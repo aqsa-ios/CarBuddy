@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "jaguar-e-type-1968-1971-1456992014.39.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

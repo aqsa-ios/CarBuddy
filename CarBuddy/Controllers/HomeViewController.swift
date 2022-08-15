@@ -8,116 +8,157 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    var searchController: UISearchController!
     
-    weak var delegate: CarSelectionDelegate?
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(CarCell.self, forCellReuseIdentifier: CarCell.reuseIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 120
+        return tableView
+    }()
     
-    var carSubmission: CarUpload?
+    var viewModels = [Car]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    var filteredModels = [Car]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
-        setupViews()
-    }
-    
-    func setupViews() {
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.autocapitalizationType = .none
+        searchController.searchBar.delegate = self
+
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.topItem?.title = "Car Buddy"
-        let homeView = HomeView()
-        homeView.translatesAutoresizingMaskIntoConstraints = false
-        homeView.yearButton.addTarget(self, action: #selector(selectYear(_:)), for: .touchUpInside)
-        homeView.modelButton.addTarget(self, action: #selector(selectModel(_:)), for: .touchUpInside)
-        homeView.makeButton.addTarget(self, action: #selector(selectMake(_:)), for: .touchUpInside)
-        homeView.submitButton.addTarget(self, action: #selector(submit), for: .touchUpInside)
-        view.addSubview(homeView)
-        NSLayoutConstraint.activate(
-            [homeView.topAnchor.constraint(equalTo: view.topAnchor),
-             homeView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.45),
-             homeView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-             homeView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16),
-            ]
-        )
+        navigationController?.navigationBar.topItem?.title = "CarBuddy"
+        // Place the search bar in the navigation bar.
+        navigationItem.searchController = searchController
+        // Make the search bar always visible.
+        navigationItem.hidesSearchBarWhenScrolling = false
         
-        Networker.retrieveCredits { result in
-            switch result {
-            case .success(let credit):
-                print("\(credit.credits) remaining")
-            case .failure(let error):
-                print(error.errorDescription)
-            }
+        view.addSubview(tableView)
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        viewModels = (UIApplication.shared.delegate as? AppDelegate)?.fetchCars() ?? []
+        filteredModels = []// viewModels
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredModels.count
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedViewModel = filteredModels[indexPath.row]
+        let detailsViewController = FavoritesDetailsViewController()
+        detailsViewController.configure(viewModel: selectedViewModel)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        navigationController?.pushViewController(detailsViewController, animated: true)
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CarCell.reuseIdentifier, for: indexPath) as? CarCell else { return UITableViewCell() }
+        let viewModel = filteredModels[indexPath.row]
+        cell.configure(viewModel)
+        return cell
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}
+
+extension HomeViewController: UISearchResultsUpdating {
+    private func findMatches(searchString: String) -> NSCompoundPredicate {
+        var searchItemsPredicate = [NSPredicate]()
+
+        let searchStringExpression = NSExpression(forConstantValue: searchString)
+        // Car make matching.
+        let makeExpression = NSExpression(forKeyPath: Car.ExpressionKeys.make.rawValue)
+        let makeSearchComparisonPredicate =
+        NSComparisonPredicate(leftExpression: makeExpression,
+                              rightExpression: searchStringExpression,
+                              modifier: .direct,
+                              type: .contains,
+                              options: [.caseInsensitive, .diacriticInsensitive])
+        
+        searchItemsPredicate.append(makeSearchComparisonPredicate)
+        
+        // Car model matching.
+        let modelExpression = NSExpression(forKeyPath: Car.ExpressionKeys.model.rawValue)
+        let modelSearchComparisonPredicate =
+        NSComparisonPredicate(leftExpression: modelExpression,
+                              rightExpression: searchStringExpression,
+                              modifier: .direct,
+                              type: .contains,
+                              options: [.caseInsensitive, .diacriticInsensitive])
+        
+        searchItemsPredicate.append(modelSearchComparisonPredicate)
+        
+        // Car year matching.
+        let yearExpression = NSExpression(forKeyPath: Car.ExpressionKeys.year.rawValue)
+        let yearSearchComparisonPredicate =
+        NSComparisonPredicate(leftExpression: yearExpression,
+                              rightExpression: searchStringExpression,
+                              modifier: .direct,
+                              type: .contains,
+                              options: [.caseInsensitive, .diacriticInsensitive])
+        
+        searchItemsPredicate.append(yearSearchComparisonPredicate)
+        
+
+        return NSCompoundPredicate(orPredicateWithSubpredicates: searchItemsPredicate)
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        // Update the filtered array based on the search text.
+        let searchResults = viewModels
+        
+        // Strip out all the leading and trailing spaces.
+        let whitespaceCharacterSet = CharacterSet.whitespaces
+        let strippedString =
+        searchController.searchBar.text!.trimmingCharacters(in: whitespaceCharacterSet)
+        let searchItems = strippedString.components(separatedBy: " ") as [String]
+        
+        // Build all the "AND" expressions for each value in searchString.
+        let andMatchPredicates: [NSPredicate] = searchItems.map { searchString in
+            findMatches(searchString: searchString)
         }
-    }
-    
-    @objc func submit() {
-        if let carSubmission = carSubmission {
-            delegate?.carSelected(carSubmission)
-        } else {
-            
-        }
-    }
-    
-    @objc func selectYear(_ sender: UIButton) {
-        let data: [[String]] = [["2012", "2013", "2014", "2015"]]
         
-        Picker.showAsPopover(data: data,
-                             fromViewController: self,
-                             sourceView: sender,
-                             doneHandler: { [weak self] (selections: [Int : String]) -> Void in
-            if let year = selections[0] {
-                let temp = self?.carSubmission
-                self?.carSubmission = CarUpload(vin: temp?.vin,
-                                                make: temp?.make,
-                                                model: temp?.model,
-                                                year: year)
-            }
-        }, cancelHandler: { () -> Void in
-            print("Canceled Popover")
-        }, selectionChangedHandler: { (selections: [Int:String], componentThatChanged: Int) -> Void  in
-            let newSelection = selections[componentThatChanged] ?? "Failed to get new selection!"
-            print("Component \(componentThatChanged) changed value to \(newSelection)")
-        })
-    }
-    
-    @objc func selectModel(_ sender: UIButton) {
-        let data: [[String]] = [["Tesla", "Volkswagen", "Aston Martin", "General Motors Lucid Tesla Apple"]]
+        // Match up the fields of the Product object.
+        let finalCompoundPredicate =
+        NSCompoundPredicate(andPredicateWithSubpredicates: andMatchPredicates)
         
-        Picker.showAsPopover(data: data,
-                             fromViewController: self,
-                             sourceView: sender,
-                             doneHandler: { [weak self] (selections: [Int : String]) -> Void in
-            if let model = selections[0] {
-                let temp = self?.carSubmission
-                self?.carSubmission = CarUpload(vin: temp?.vin,
-                                                make: temp?.make,
-                                                model: model,
-                                                year: temp?.year)
-            }
-        }, cancelHandler: { () -> Void in
-            print("Canceled Popover")
-        }, selectionChangedHandler: { (selections: [Int:String], componentThatChanged: Int) -> Void  in
-            let newSelection = selections[componentThatChanged] ?? "Failed to get new selection!"
-            print("Component \(componentThatChanged) changed value to \(newSelection)")
-        })
-    }
-    
-    @objc func selectMake(_ sender: UIButton) {
-        let data: [[String]] = [["Tesla", "Volkswagen", "Aston Martin", "General Motors Lucid Tesla Apple"]]
-        
-        Picker.showAsPopover(data: data,
-                             fromViewController: self,
-                             sourceView: sender,
-                             doneHandler: { [weak self] (selections: [Int : String]) -> Void in
-            if let make = selections[0] {
-                let temp = self?.carSubmission
-                self?.carSubmission = CarUpload(vin: temp?.vin,
-                                                make: make,
-                                                model: temp?.model,
-                                                year: temp?.year)
-            }
-        }, cancelHandler: { () -> Void in
-            print("Canceled Popover")
-        }, selectionChangedHandler: { (selections: [Int:String], componentThatChanged: Int) -> Void  in
-            let newSelection = selections[componentThatChanged] ?? "Failed to get new selection!"
-            print("Component \(componentThatChanged) changed value to \(newSelection)")
-        })
+        let filteredResults = searchResults.filter { finalCompoundPredicate.evaluate(with: $0) }
+        filteredModels = filteredResults
     }
 }

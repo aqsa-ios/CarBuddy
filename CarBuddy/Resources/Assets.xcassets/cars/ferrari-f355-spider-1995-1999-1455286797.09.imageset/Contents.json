@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ferrari-f355-spider-1995-1999-1455286797.09.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

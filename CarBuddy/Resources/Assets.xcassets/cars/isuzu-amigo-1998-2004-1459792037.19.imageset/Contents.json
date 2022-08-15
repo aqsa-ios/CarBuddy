@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "isuzu-amigo-1998-2004-1459792037.19.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

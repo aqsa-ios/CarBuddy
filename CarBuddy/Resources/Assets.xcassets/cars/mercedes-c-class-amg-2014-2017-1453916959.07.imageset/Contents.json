@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "mercedes-c-class-amg-2014-2017-1453916959.07.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

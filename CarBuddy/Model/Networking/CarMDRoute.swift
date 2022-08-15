@@ -49,3 +49,30 @@ extension CarMDRoute {
         let version = "/v3.0"
     }
 }
+
+struct CarBase: Codable {
+    let make: String?
+    let model: String?
+    let year: String?
+}
+
+struct EngineBase: Codable {
+    let car: CarBase
+    let engine: String
+}
+
+struct ImageTopLevel: Codable {
+    let data: ImageResponse
+}
+
+struct ImageResponse: Codable {
+    let image: String
+}
+
+struct CreditTopLevel: Codable {
+    let data: CreditDataLevel
+}
+
+struct CreditDataLevel: Codable {
+    var credits: Int
+}

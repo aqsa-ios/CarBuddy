@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "oldsmobile-achieva-1992-1997-1455633149.37.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

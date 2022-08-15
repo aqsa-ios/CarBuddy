@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "GrandNomade_Suzuki-peque%C3%B1o.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

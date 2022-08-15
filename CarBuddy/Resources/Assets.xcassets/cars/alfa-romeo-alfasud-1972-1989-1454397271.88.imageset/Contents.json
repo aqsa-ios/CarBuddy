@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "alfa-romeo-alfasud-1972-1989-1454397271.88.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

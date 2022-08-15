@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "CadillacDeVille1965Coupe0000.jpg8738821f-4f66-454e-b613-ae316a33d19aOriginal-1.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

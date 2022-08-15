@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-pixis-mega-2015-2017-1469156668.44.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

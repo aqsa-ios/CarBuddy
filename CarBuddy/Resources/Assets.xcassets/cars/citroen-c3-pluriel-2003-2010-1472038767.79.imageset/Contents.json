@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "citroen-c3-pluriel-2003-2010-1472038767.79.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

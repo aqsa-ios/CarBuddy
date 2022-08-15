@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ferrari-f12tdf-2016-2016-1455257665.47.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

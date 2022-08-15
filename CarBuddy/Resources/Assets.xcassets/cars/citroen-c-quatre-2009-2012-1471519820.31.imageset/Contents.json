@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "citroen-c-quatre-2009-2012-1471519820.31.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

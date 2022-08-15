@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ram-Promaster-2013-2016-1455166062.18.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

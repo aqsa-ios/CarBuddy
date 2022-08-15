@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "MITSUBISHI_L-200-Triton-Single-Cab-2005_main.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

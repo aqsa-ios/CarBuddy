@@ -29,4 +29,13 @@ public extension URLRequest {
         
         return request
     }
+    
+    static func request(_ route: CarsNinjaRoute, queryItems: [URLQueryItem] = []) -> Self? {
+        guard let url = route.url(queryItems) else { return nil }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.addValue(route.constants.authorizationToken, forHTTPHeaderField: route.constants.authorizationKey)
+        
+        return request
+    }
 }

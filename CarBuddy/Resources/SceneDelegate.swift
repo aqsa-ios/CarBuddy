@@ -17,15 +17,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let homeViewController = HomeViewController()
-        let homeTabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        let homeTabBarItemImage = UIImage(systemName: "house")
+        let homeTabBarItemFilledImage = UIImage(systemName: "house.fill")
+        let homeTabBarItem = UITabBarItem(title: "Home",
+                                          image: homeTabBarItemImage,
+                                          selectedImage: homeTabBarItemFilledImage)
         homeViewController.tabBarItem = homeTabBarItem
         let homeNavigationWrapper = UINavigationController(rootViewController: homeViewController)
-        let savedViewController = SavedViewController()
-        let savedTabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-        savedViewController.tabBarItem = savedTabBarItem
-        let savedNavigationWrapper = UINavigationController(rootViewController: savedViewController)
+        let favoritesViewController = FavoritesViewController()
+        let favoritesTabBarItemImage = UIImage(systemName: "heart")
+        let favoritesTabBarItemFilledImage = UIImage(systemName: "heart.fill")
+        let favoritesTabBarItem = UITabBarItem(title: "Favorites",
+                                          image: favoritesTabBarItemImage,
+                                          selectedImage: favoritesTabBarItemFilledImage)
+        favoritesViewController.tabBarItem = favoritesTabBarItem
+        UITabBar.appearance().tintColor = .red
+        UINavigationBar.appearance().tintColor = .red
+        let favoritesNavigationWrapper = UINavigationController(rootViewController: favoritesViewController)
         let tabs = UITabBarController()
-        tabs.viewControllers = [homeNavigationWrapper, savedNavigationWrapper]
+        tabs.viewControllers = [homeNavigationWrapper, favoritesNavigationWrapper]
         window?.rootViewController = tabs
         window?.makeKeyAndVisible()
     }

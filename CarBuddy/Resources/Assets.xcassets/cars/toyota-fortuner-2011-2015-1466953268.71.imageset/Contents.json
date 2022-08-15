@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-fortuner-2011-2015-1466953268.71.JPG",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

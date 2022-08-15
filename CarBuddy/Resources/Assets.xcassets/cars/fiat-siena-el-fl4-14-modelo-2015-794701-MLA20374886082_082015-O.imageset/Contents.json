@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "fiat-siena-el-fl4-14-modelo-2015-794701-MLA20374886082_082015-O.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

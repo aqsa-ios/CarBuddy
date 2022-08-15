@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "mazda-flair-wagon-2012-2013-1453916385.23.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

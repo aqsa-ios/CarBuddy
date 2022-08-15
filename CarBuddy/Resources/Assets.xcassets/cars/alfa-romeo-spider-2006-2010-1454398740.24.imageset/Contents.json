@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "alfa-romeo-spider-2006-2010-1454398740.24.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

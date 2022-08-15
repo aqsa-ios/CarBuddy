@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "honda-Civic_5d-2016-2017-1462979366.76.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

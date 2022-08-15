@@ -8,8 +8,7 @@
 import UIKit
 
 protocol CarSelectionDelegate: AnyObject {
-    func paymentError()
-    func carSelected(_ submission: CarUpload)
+    func carSelected(_ submission: CarBase)
 }
 
 public class HomeView: UIView {
@@ -17,7 +16,7 @@ public class HomeView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.text = "Welcome Back!".uppercased()
+        label.text = "Let's find your drive"
         return label
     }()
     
@@ -44,7 +43,7 @@ public class HomeView: UIView {
     
     lazy var submitButton: UIButton = {
         let label = UIButton(type: .system)
-        label.setTitle("Submit", for: .normal)
+        label.setTitle("Search", for: .normal)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

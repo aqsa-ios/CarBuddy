@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-hilux-surf-1995-2002-1470650398.98.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

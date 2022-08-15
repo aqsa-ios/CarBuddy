@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-mr2-roadster-1999-2007-1466935708.94.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

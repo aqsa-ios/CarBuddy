@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "aston-martin-amv8-1972-1989-1460183992.0.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

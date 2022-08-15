@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "toyota-sprinter-carib-1982-1988-1471410364.3.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
