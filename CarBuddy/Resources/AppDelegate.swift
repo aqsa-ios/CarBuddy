@@ -52,13 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CoreDataStack.saveContext()
     }
 
-    private lazy var fetchRequest: NSFetchRequest<Car> = {
-      let request = NSFetchRequest<Car>(entityName: "Car")
-      request.predicate = NSPredicate(value: true)
-      return request
-    }()
-
     func fetchCars() -> [Car] {
+        let fetchRequest = NSFetchRequest<Car>(entityName: "Car")
         let cars = (try? CoreDataStack.context.fetch(fetchRequest)) ?? []
         return cars
     }
