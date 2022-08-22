@@ -14,7 +14,6 @@ extension Car {
         case make
         case model
         case year
-        case imageURL
     }
     
     @discardableResult convenience init(
