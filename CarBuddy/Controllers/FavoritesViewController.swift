@@ -28,14 +28,14 @@ class FavoritesViewController: UIViewController {
         }
     }
     
-    fileprivate func setCars() {
+    fileprivate func loadFavoritedCars() {
         let cars = (UIApplication.shared.delegate as? AppDelegate)?.fetchCars() ?? []
         viewModels = cars.filter { $0.liked }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setCars()
+        loadFavoritedCars()
     }
     
     override func viewDidLoad() {
