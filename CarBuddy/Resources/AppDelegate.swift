@@ -39,11 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let csv = csvData.split(whereSeparator: \.isNewline).map { String($0) }
             for row in csv {
                 let content = row.split(separator: ",").map { String($0) }
-                let car = Car(make: content[0],
-                                 model: content[1],
-                                 year: content[2],
-                                 imageURL: content[3]
-                )
+                Car(make: content[0], model: content[1], year: content[2], imageURL: content[3])
             }
         } catch {
             print(error)
