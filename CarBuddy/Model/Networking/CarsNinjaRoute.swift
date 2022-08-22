@@ -8,18 +8,12 @@
 import Foundation
 
 public enum CarsNinjaRoute {
-    case cars, decode, field, image
+    case cars
 
     var path: String {
         switch self {
         case .cars:
             return "/cars"
-        case .decode:
-            return "/decode"
-        case .field:
-            return "/fields"
-        case .image:
-            return "/image"
         }
     }
 

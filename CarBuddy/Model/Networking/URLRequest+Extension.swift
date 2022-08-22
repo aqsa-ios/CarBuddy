@@ -20,16 +20,6 @@ public extension URLComponents {
 }
 
 public extension URLRequest {
-    static func request(_ route: CarMDRoute) -> Self? {
-        guard let url = route.url() else { return nil }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue(route.constants.authorizationToken, forHTTPHeaderField: route.constants.authorizationKey)
-        request.addValue(route.constants.partnerToken, forHTTPHeaderField: route.constants.partnerTokenKey)
-        
-        return request
-    }
-    
     static func request(_ route: CarsNinjaRoute, queryItems: [URLQueryItem] = []) -> Self? {
         guard let url = route.url(queryItems) else { return nil }
         var request = URLRequest(url: url)

@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         return tableView
     }()
     
-    private var welcomeView = WelcomeView()
+    private var noResultsView = NoResultsView()
     
     var viewModels = [Car]() {
         didSet {
@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    var filteredModels = [Car]() {
+    var searchResultViewModels = [Car]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -40,8 +40,8 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        welcomeView.isHidden = !filteredModels.isEmpty
-        tableView.isHidden = filteredModels.isEmpty
+        noResultsView.isHidden = !searchResultViewModels.isEmpty
+        tableView.isHidden = searchResultViewModels.isEmpty
     }
     
     override func viewDidLoad() {
@@ -68,27 +68,27 @@ class HomeViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         
-        welcomeView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(welcomeView)
-        welcomeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        welcomeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        welcomeView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        welcomeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        noResultsView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(noResultsView)
+        noResultsView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        noResultsView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        noResultsView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        noResultsView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         viewModels = (UIApplication.shared.delegate as? AppDelegate)?.fetchCars() ?? []
-        filteredModels = []// viewModels
+        searchResultViewModels = []
     }
 }
 
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredModels.count
+        return searchResultViewModels.count
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedViewModel = filteredModels[indexPath.row]
-        let detailsViewController = FavoritesDetailsViewController()
+        let selectedViewModel = searchResultViewModels[indexPath.row]
+        let detailsViewController = CarDetailsViewController()
         detailsViewController.configure(viewModel: selectedViewModel)
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -100,7 +100,7 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CarCell.reuseIdentifier, for: indexPath) as? CarCell else { return UITableViewCell() }
-        let viewModel = filteredModels[indexPath.row]
+        let viewModel = searchResultViewModels[indexPath.row]
         cell.configure(viewModel)
         return cell
     }
@@ -175,8 +175,8 @@ extension HomeViewController: UISearchResultsUpdating {
         NSCompoundPredicate(andPredicateWithSubpredicates: andMatchPredicates)
         
         let filteredResults = searchResults.filter { finalCompoundPredicate.evaluate(with: $0) }
-        filteredModels = filteredResults
-        welcomeView.isHidden = true
+        searchResultViewModels = filteredResults
+        noResultsView.isHidden = true
         tableView.isHidden = false
     }
 }

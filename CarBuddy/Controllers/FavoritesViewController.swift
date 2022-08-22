@@ -63,7 +63,7 @@ extension FavoritesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedViewModel = viewModels[indexPath.row]
-        let detailsViewController = FavoritesDetailsViewController()
+        let detailsViewController = CarDetailsViewController()
         detailsViewController.configure(viewModel: selectedViewModel)
         tableView.deselectRow(at: indexPath, animated: true)
         navigationController?.pushViewController(detailsViewController, animated: true)

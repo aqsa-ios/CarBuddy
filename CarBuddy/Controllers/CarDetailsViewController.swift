@@ -1,5 +1,5 @@
 //
-//  FavoritesDetailsViewController.swift
+//  CarDetailsViewController.swift
 //  CarBuddy
 //
 //  Created by Aqsa Khan on 7/25/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesDetailsViewController: UIViewController {
+class CarDetailsViewController: UIViewController {
     lazy var carDetailsView: CarDetailsView = {
         let view = CarDetailsView()
         view.translatesAutoresizingMaskIntoConstraints = false
